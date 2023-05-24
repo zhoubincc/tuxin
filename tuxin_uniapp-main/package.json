@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "dayjs": "^1.11.6",
+    "image-tools": "^1.4.0",
+    "md5": "^2.3.0",
+    "uuid": "^9.0.0",
+    "uview-ui": "^2.0.31"
+  }
+}

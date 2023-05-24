@@ -1,0 +1,48 @@
+{
+  "name": "OpenIMSDK",
+  "id": "Tuoyun-OpenIMSDK",
+  "version": "2.3.0",
+  "description": "IM",
+  "_dp_type": "nativeplugin",
+  "_dp_nativeplugin": {
+    "android": {
+      "plugins": [
+        {
+          "type": "module",
+          "name": "Tuoyun-OpenIMSDK",
+          "class": "com.example.openim.OpenIMSDK"
+        },
+        {
+          "type": "module",
+          "name": "OUIFilePicker",
+          "class": "io.openim.android.file_selector.FileSelector"
+        }
+      ],
+      "integrateType": "aar",
+      "dependencies": [
+        "com.google.android.material:material:1.4.0",
+        "androidx.activity:activity:1.2.4",
+        "androidx.activity:activity-ktx:1.3.1",
+        "androidx.fragment:fragment-ktx:1.3.6"
+     ]
+    },
+    "ios": {
+      "plugins": [
+        {
+          "type": "module",
+          "name": "Tuoyun-OpenIMSDK",
+          "class": "OpenIMModule"
+        },
+        {
+          "type": "module",
+          "name": "OUIFilePicker",
+          "class": "OUIFilePicker"
+        }
+      ],
+      "integrateType": "framework",
+      "validArchitectures": [
+        "arm64"
+      ]
+    }
+  }
+}
