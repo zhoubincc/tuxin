@@ -2,7 +2,7 @@
 	<view class="conversation_container">
 		<chat-header ref="chatHeaderRef" />
 		<view class="conversation_search">
-			<u-search @click="toSearch" disabled :showAction="false" shape="square"></u-search>
+			<u-search searchIcon="@/static/images/04-tianjia@2x.png" @click="toSearch" disabled :showAction="false" shape="square"></u-search>
 		</view>
 		<z-paging ref="paging" :fixed="false" :auto="false" default-page-size="20" :show-loading-more-no-more-view="false" :refresher-enabled="!storeIsSyncing" @query="queryList">
 			<u-swipe-action ref="swipeWrapperRef" class="swipe_wrapper" v-show="!storeIsSyncing">
@@ -112,5 +112,15 @@
 	/deep/.u-swipe-action-item__right__button__wrapper__text {
 		-webkit-line-clamp: 2 !important;
 		max-width: 32px;
+	}
+	/deep/ .uicon-search{
+		left: 250rpx;
+	}
+	/deep/ .uni-input-placeholder{
+		padding: 0 0 0 240rpx;
+	}
+	/deep/ .u-icon__img{
+		background: url(@/static/images/04-sousuo@2x.png) no-repeat center / 25rpx;
+		left: 250rpx;
 	}
 </style>

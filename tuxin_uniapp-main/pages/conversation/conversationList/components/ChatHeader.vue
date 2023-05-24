@@ -1,29 +1,20 @@
 <template>
 	<view class="chat_header">
 		<view class="self_info">
-			<my-avatar :src="storeSelfInfo.faceURL" :desc="storeSelfInfo.nickname" size="48" />
-			<view class="self_info_desc">
-				<!-- <text class="company">托云信息技术</text> -->
-				<view class="user_state">
-					<text class="nickname">{{storeSelfInfo.nickname}}</text>
-					<view class="online_state">
-						<view class="dot">
-						</view>
-						<text>手机在线</text>
-					</view>
-				</view>
-			</view>
+			途信IM
 		</view>
 		<view class="right_action">
 			<view class="call_icon">
 				<!-- <image src="@/static/images/common_call.png" ></image> -->
 			</view>
 			<view @click="showMore" class="more_icon">
-				<image src="@/static/images/common_circle_add.png" ></image>
+				<image src="@/static/images/04-tianjia@2x.png" ></image>
 			</view>
 			<u-overlay :show="moreMenuVisible" @click="moreMenuVisible = false" opacity="0">
 				<!-- <u-transition duration="0" :show="moreMenuVisible"> -->
-				<view :style="{top:popMenuPosition.top,right:popMenuPosition.right}" class="more_menu">
+				<view class="triangle" :style="{top:popMenuPosition.top-23+'px'}"></view>
+				<view class="box_shadowing"></view>
+				<view :style="{top:popMenuPosition.top-0+10+'px',right:popMenuPosition.right}" class="more_menu">
 					<view @click="clickMenu(item)" v-for="item in moreMenus" :key="item.idx" class="menu_item">
 						<image :src="item.icon" mode=""></image>
 						<text>{{item.title}}</text>
@@ -63,25 +54,27 @@
 					right: 0
 				},
 				moreMenus: [{
-						idx: 0,
-						title: '扫一扫',
-						icon: require("static/images/more_qr.png")
-					},
-					{
 						idx: 1,
 						title: '添加好友',
-						icon: require("static/images/more_add_friend.png")
+						icon: require("static/images/05haoyou@2x.png")
 					},
 					{
 						idx: 2,
-						title: '添加群聊',
-						icon: require("static/images/more_add_group.png")
+						title: '发起群聊',
+						icon: require("static/images/05qunliao@2x.png")
 					},
 					{
-						idx: 3,
-						title: '创建群聊',
-						icon: require("static/images/more_create_group.png")
-					},
+						idx: 0,
+						title: '扫一扫',
+						icon: require("static/images/05saoyisao@2x.png")
+					}
+					
+					
+					// {
+					// 	idx: 3,
+					// 	title: '创建群聊',
+					// 	icon: require("static/images/more_create_group.png")
+					// },
 				]
 			};
 		},
@@ -129,7 +122,7 @@
 					bottom
 				} = await this.getEl('.more_icon')
 				this.popMenuPosition.right = (uni.getWindowInfo().windowWidth - right) + 'px';
-				this.popMenuPosition.top = bottom + 'px'
+				this.popMenuPosition.top = bottom
 				this.moreMenuVisible = true
 			},
 			getEl(el) {
@@ -153,44 +146,9 @@
 
 		.self_info {
 			@include btwBox();
-
-			&_desc {
-				@include colBox(true);
-				margin-left: 24rpx;
-				color: $uni-text-color;
-
-				.company {
-					@include nomalEllipsis();
-					font-size: 24rpx;
-					margin-bottom: 10rpx;
-					max-width: 300rpx;
-				}
-
-				.user_state {
-					@include vCenterBox();
-					
-					.nickname {
-						@include nomalEllipsis();
-						font-size: 26rpx;
-						max-width: 240rpx;
-					}
-
-					.online_state {
-						@include vCenterBox();
-						margin-left: 24rpx;
-						font-size: 24rpx;
-
-						.dot {
-							background-color: #10CC64;
-							width: 12rpx;
-							height: 12rpx;
-							border-radius: 50%;
-							margin-right: 12rpx;
-						}
-					}
-				}
-
-			}
+			font-size: 42rpx;
+			font-weight: 800;
+			color: #111111;
 		}
 
 		.right_action {
@@ -217,14 +175,14 @@
 				position: absolute;
 				// bottom: 0;
 				// left: 100%;
-				z-index: 999;
+				z-index: 998;
 				// transform: translate(-100%, 100%);
 				box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.16);
 				width: max-content;
 				border-radius: 12rpx;
 				background-color: #fff;
 				padding: 12rpx 0;
-
+				// top:116rpx;
 				.menu_item {
 					display: flex;
 					padding: 20rpx 48rpx;
@@ -233,8 +191,8 @@
 					border-bottom: 1px solid #F0F0F0;
 
 					image {
-						width: 24px;
-						height: 24px;
+						width: 16px;
+						height: 16px;
 						margin-right: 24rpx;
 					}
 
@@ -244,6 +202,26 @@
 				}
 
 			}
+		}
+		/deep/ .triangle{
+			position: absolute;
+			right: 50rpx;
+			// top:50rpx;
+			z-index: 999;
+			width: 0;
+			height: 0;
+			border-top: 20px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 20px solid #FFFFFF;
+			border-left: 10px solid transparent;
+		}
+		/deep/ .box_shadowing{
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			background: #000000;
+			border-radius: 0px 0px 0px 0px;
+			opacity: 0.13;
 		}
 	}
 </style>

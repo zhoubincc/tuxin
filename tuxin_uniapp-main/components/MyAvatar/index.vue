@@ -14,7 +14,7 @@
 			src: String,
 			shape: {
 				type: String,
-				default: 'square'
+				default: 'circle'
 			},
 			size: {
 				type: String,

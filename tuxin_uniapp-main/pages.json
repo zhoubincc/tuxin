@@ -452,25 +452,31 @@
 		"height": "55px",
 		"list": [{
 			"pagePath": "pages/conversation/conversationList/index",
-			"iconPath": "./static/images/tabbar_conversation.png",
-			"selectedIconPath": "static/images/tabbar_conversation_active.png",
-			"text": "OpenIM"
+			"iconPath": "./static/images/04tab_xiaoxi@2x.png",
+			"selectedIconPath": "static/images/04tab_xiaoxi2@2x.png",
+			"text": "消息"
 		}, {
 			"pagePath": "pages/contact/index/index",
-			"iconPath": "./static/images/tabbar_contacts.png",
-			"selectedIconPath": "static/images/tabbar_contacts_active.png",
+			"iconPath": "./static/images/04tab_tongxunlu@2x.png",
+			"selectedIconPath": "static/images/02tab_tongxunlu2@2x.png",
 			"text": "通讯录"
 		},
 		 {
 			"pagePath": "pages/workbench/index/index",
-			"iconPath": "./static/images/tabbar_workbench.png",
-			"selectedIconPath": "static/images/tabbar_workbench_active.png",
-			"text": "工作台"
+			"iconPath": "./static/images/04guanwang@2x.png",
+			"selectedIconPath": "static/images/04guanwang2@2x.png",
+			"text": "官网"
 		}, 
  		{
 			"pagePath": "pages/profile/index/index",
-			"iconPath": "./static/images/tabbar_profile.png",
-			"selectedIconPath": "static/images/tabbar_profile_active.png",
+			"iconPath": "./static/images/04tab_pengyouquan@2x.png",
+			"selectedIconPath": "static/images/04tab_pengyouquan2@2x.png",
+			"text": "朋友圈"
+		}, 
+ 		{
+			"pagePath": "pages/profile/index/index",
+			"iconPath": "./static/images/04ab_wode @2x.png",
+			"selectedIconPath": "static/images/04tab_wode2@2x.png",
 			"text": "我的"
 		}]
 	},

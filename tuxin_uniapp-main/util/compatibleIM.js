@@ -57,6 +57,7 @@ const unsubscribe = (evnetName, handler) => {
 }
 
 const IMMethods = {
+	WakeUp: "WakeUp",
 	InitSDK: "initSDK",
 	Login: "login",
 	Logout: "logout",

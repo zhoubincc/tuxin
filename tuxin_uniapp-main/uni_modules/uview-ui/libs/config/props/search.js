@@ -12,7 +12,7 @@ export default {
     search: {
         shape: 'round',
         bgColor: '#f2f2f2',
-        placeholder: '请输入关键字',
+        placeholder: '搜索',
         clearabled: true,
         focus: false,
         showAction: true,
